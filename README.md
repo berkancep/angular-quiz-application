@@ -15,12 +15,10 @@
 
 <p>https://stackblitz.com/edit/tr-quiz-application <i>src -> app -> commons -> constants.ts</i>  dosyası üzerinden <b>QUESTIONS</b> üzerine eklemeler yaparak yeni sorular ekleyebilirsiniz.</p>
 
-
-  <img src="https://i.hizliresim.com/renxi7j.png" width="50%" >
-   <img src="https://i.hizliresim.com/jld7gef.png"  width="50%">
-   <img src="https://i.hizliresim.com/7oiwzkw.png" width="50%" >
-
- <img src="https://i.hizliresim.com/d7tom4a.png"  width="50%">
- <img src="https://i.hizliresim.com/59dsb4o.png"  width="50%">
-<img src="https://i.hizliresim.com/hfocoom.png"  width="50%">
+<img src="https://i.hizliresim.com/renxi7j.png" width="30%" >
+<img src="https://i.hizliresim.com/jld7gef.png"  width="30%">
+<img src="https://i.hizliresim.com/7oiwzkw.png" width="30%" >
+<img src="https://i.hizliresim.com/d7tom4a.png"  width="30%">
+<img src="https://i.hizliresim.com/59dsb4o.png"  width="30%">
+<img src="https://i.hizliresim.com/hfocoom.png"  width="30%">
 
