@@ -1,0 +1,61 @@
+<div class="container mt-5">
+<div class="d-flex justify-content-center row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <input type="text" [(ngModel)]="quiz.name" class="form-control">
+      </div>
+
+      <div *ngIf="!quiz?.isFinished" class="card-body">
+
+        <app-joker [jokers]="quiz?.jokers" (onClickJoker)="useJoker($event)"></app-joker>
+
+        <h5 class="card-title">
+          {{quiz?.currentQuestion?.text}}
+        </h5>
+        <hr>
+        <ng-container [ngSwitch]="quiz?.currentQuestion?.type">
+
+          <ng-container *ngSwitchCase="QuestionType.CHOICE">
+            <app-choice-question [question]="quiz?.currentQuestion"
+              (onClickAnswerQuestionChoice)="answerQuestionChoice($event)">
+            </app-choice-question>
+          </ng-container>
+
+          <ng-container *ngSwitchCase="QuestionType.TEXT">
+            <app-text-question (onClickAnswerQuestionText)="answerQuestionText($event)"></app-text-question>
+          </ng-container>
+
+          <ng-container *ngSwitchCase="QuestionType.AUDIO">
+            <app-audio-question [question]="quiz?.currentQuestion"></app-audio-question>
+            <app-choice-question [question]="quiz?.currentQuestion"
+              (onClickAnswerQuestionChoice)="answerQuestionChoice($event)">
+            </app-choice-question>
+          </ng-container>
+
+          <ng-container *ngSwitchCase="QuestionType.IMAGE">
+            <app-image-question [question]="quiz?.currentQuestion">
+            </app-image-question>
+            <app-choice-question [question]="quiz?.currentQuestion"
+              (onClickAnswerQuestionChoice)="answerQuestionChoice($event)">
+            </app-choice-question>
+          </ng-container>
+
+          <ng-container *ngSwitchCase="QuestionType.VIDEO">
+            <app-video-question [question]="quiz?.currentQuestion">
+            </app-video-question>
+            <app-choice-question [question]="quiz?.currentQuestion"
+              (onClickAnswerQuestionChoice)="answerQuestionChoice($event)">
+            </app-choice-question>
+          </ng-container>
+
+        </ng-container>
+
+      </div>
+
+      <app-score [quiz]="quiz" (onClickPlayAgain)="playAgain()"></app-score>
+      <app-progress [quiz]="quiz"></app-progress>
+    </div>
+  </div>
+</div>
+</div>
